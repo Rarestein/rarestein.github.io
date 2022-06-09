@@ -65,7 +65,9 @@ nav button:hover {
     background-color: rgba(8, 204, 139, 0.8);
 }
 
-@media (prefers-color-scheme:dark) {
+
+/* still testing this */
+/*@media (prefers-color-scheme:dark) {
     * {
         background-color: #13192f;
     }
@@ -73,4 +75,4 @@ nav button:hover {
     header {
         background-color: #000000;
     }
-}
+}*/
