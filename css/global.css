@@ -153,12 +153,6 @@ footer p {
 }
 
 
-<<<<<<< Updated upstream
-/* still testing this */
-/*@media (prefers-color-scheme:dark) {
-    * {
-        background-color: #13192f;
-=======
 /*dark mode section*/
 @media (prefers-color-scheme:dark) {
 
@@ -201,10 +195,9 @@ footer p {
 
     .mobile__nav {
         display: initial;
->>>>>>> Stashed changes
     }
 
     html {
         min-width: 360;
     }
-}*/
+}
