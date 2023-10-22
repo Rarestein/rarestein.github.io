@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+:root {
+    --font-head: "Roboto", sans-serif;
+    --font-main: "Roboto", sans-serif;
+
+}
+
+body {
+    height: 100%;
+    margin: 0;
+}
+
+header {
+    margin: 0 auto;
+}
+
+header h1 {
+    font-family: var(--font-head);
+    font-weight: bolder;
+}
+
+
+.container {
+    display: grid;
+    grid-template-columns: 96px auto;
+}
+
+
+
+.menu {
+    height: 100vh;
+    min-height: 100vh;
+    box-sizing: border-box;
+    padding: 24px 0;
+    background: #F3F6FC;
+
+}
+
+.menu-button {
+    color: #000;
+    font-family: "Roboto";
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+
+.menu-button span {
+    margin-bottom: -8px;
+    text-align: center;
+    width: 56px;
+    padding: 4px 0;
+    border-radius: 27px;
+}
+
+.menu-button.selected span {
+    background: #CBF0F8;
+}
+
+.menu-button.selected:hover span {
+    background: #C3ECF3;
+}
+
+.menu-button.selected:active span {
+    background: #A2D9E0;
+}
+
+.menu-button:hover span {
+    background: #EBEFF5;
+}
+
+.menu-button:active span {
+    background: #CED3D7;
+}
+
+/* 
+@media(prefers-color-scheme: dark) {
+    body {
+        background: var(--color-dark-head);
+        color: var(--color-dark-text);
+    }
+
+    .card {
+        background: var(--color-dark-card);
+
+    }
+} */
+
+@media only screen and (max-width: 767px) {
+    .container {
+        display: grid;
+        grid-template-rows: auto 96px;
+    }
+
+    .menu {
+        display: flex;
+        align-items: end;
+        justify-content: center;
+        padding: 8px 0;
+        background: #F3F6FC;
+        width: 100vw;
+        height: 96px;
+        min-height: 96px;
+        position: fixed;
+        bottom: 0;
+    }
+
+    .menu-button {
+        margin: 0 auto;
+    }
+}
+
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+    /* CSS rules for tablets */
+}
+
+@media only screen and (min-width: 1024px) {
+    /* CSS rules for PCs and larger screens */
+}
