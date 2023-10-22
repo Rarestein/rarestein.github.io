@@ -9,6 +9,7 @@
 body {
     height: 100%;
     margin: 0;
+    font-family: "Roboto";
 }
 
 header {
@@ -98,7 +99,6 @@ img {
     body {
         background: #202124;
         color: #FFF;
-        font-family: "Roboto";
     }
 
     .menu {
