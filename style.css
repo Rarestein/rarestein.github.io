@@ -1,178 +1,129 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
 
 :root {
-    --font-head: "Roboto", sans-serif;
-    --font-main: "Roboto", sans-serif;
+    --font: 'Merriweather', sans-serif;
 
+    --bg-light: #F3F7F4;
+    --bg-dark: #080C09;
+
+    --text-light: #080C09;
+    --text-dark: #F3F7F4;
+
+    --primary: #5F8C68;
+    --secondary: #38524D;
+    --accent: #4A6D6D;
 }
 
 body {
-    height: 100%;
+    font-family: var(--font);
+    background: var(--bg-light);
+    color: var(--text-light);
     margin: 0;
-    font-family: "Roboto";
+    padding: 0;
 }
 
-header {
-    margin: 0 auto;
+.menu-bar {
+    display: flex;
+    background: #F1F3F4;
+    padding: 1rem;
+    justify-content: space-between;
 }
 
-header h1 {
-    font-family: var(--font-head);
-    font-weight: bolder;
+.menu-bar p {
+    font-size: 1.8rem;
+    margin: 0 1rem;
 }
 
-
-.container {
-    display: grid;
-    grid-template-columns: 96px auto;
-}
-
-.menu {
-    height: 100vh;
-    min-height: 100vh;
-    box-sizing: border-box;
-    padding: 24px 0;
-    background: #F3F6FC;
-
+nav {
+    display: flex;
+    align-items: center;
+    /* float: right; */
 }
 
 .menu-button {
-    color: #000;
-    font-family: "Roboto";
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
-    text-decoration: none;
-}
-
-
-.menu-button span {
-    margin-bottom: -8px;
-    text-align: center;
-    width: 56px;
-    padding: 4px 0;
-    border-radius: 27px;
-}
-
-.menu-button.selected span {
-    background: #CBF0F8;
-}
-
-.menu-button.selected:hover span {
-    background: #C3ECF3;
-}
-
-.menu-button.selected:active span {
-    background: #A2D9E0;
-}
-
-.menu-button:hover span {
-    background: #EBEFF5;
-}
-
-.menu-button:active span {
-    background: #CED3D7;
-}
-
-img {
-    border-radius: 32px;
-}
-
-.content {
-    padding: 0 60px;
-    height: 100vh;
-    overflow-y: scroll;
-}
-
-.menu-button span,
-.menu-button:hover span,
-.menu-button:active span,
-.menu-button.selected span,
-.menu-button.selected:hover span,
-.menu-button.selected:active span {
+    padding: 0.5rem 1rem;
+    margin: 0 0.5rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
     transition: 125ms ease-in-out;
+    text-decoration: none;
+    color: inherit;
 }
 
+.menu-button:hover {
+    background: var(--primary);
+    transition: 125ms ease-in-out;
+    box-shadow: 0 0 0 2px var(--secondary);
+    color: var(--text-dark);
+}
+
+.menu-active {
+    background: var(--accent);
+    transition: 125ms ease-in-out;
+    box-shadow: 0 0 0 2px var(--accent);
+    color: var(--text-dark);
+}
+
+.name {
+    width: fit-content;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    background-color: var(--primary);
+    margin: 1rem 8rem;
+}
+
+.name h1 {
+    font-size: 6rem;
+    margin: 1rem 2rem;
+}
+
+.name p {
+    font-size: 1.5rem;
+    margin: 1rem 2rem;
+}
+
+.description {
+
+    float: right;
+    margin: 1rem 8rem;
+    font-size: 1.3rem;
+}
+
+.page-title{
+    margin: 1rem 8rem;
+    font-size: 1.6rem;
+}
+
+.page-content{
+    margin: 1rem 8rem;
+    font-size: 1.3rem;
+}
+
+.columns {
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+
+.column span {
+    padding-right: 8px;
+    width: 100px;
+    text-align: right;
+    font-weight: 600;
+}
 
 @media(prefers-color-scheme: dark) {
     body {
-        background: #202124;
-        color: #FFF;
+        background: var(--bg-dark);
+        color: var(--text-dark);
     }
-
-    .menu {
-        background: #2D2E31;
-    }
-
-    .menu-button {
-        color: #F1F3F4;
-    }
-
-    .menu-button.selected span {
-        background: #4B737B;
-    }
-
-    .menu-button.selected:hover span {
-        background: #517880;
-    }
-
-    .menu-button.selected:active span {
-        background: #658C94;
-    }
-
-    .menu-button:hover span {
-        background: #353639;
-    }
-
-    .menu-button:active span {
-        background: #545758;
-    }
-}
-
-@media only screen and (max-width: 767px) {
-    /* body {position: f;} */
-
-    /* body {
-        position: fixed;
-    } */
-
-    .menu {
+    
+    .menu-bar {
         display: flex;
-        align-items: end;
         justify-content: center;
-        padding: 0 0;
-        width: 100vw;
-        height: 80px;
-        min-height: 80px;
-        position: fixed;
-        bottom: 0;
+        background: #121212;
+        padding: 1rem;
     }
-
-    .menu-button {
-        margin: 0 auto -6px;
-    }
-
-    .content {
-        /* display: inline; */
-        padding: 0 16px;
-        width: calc(100vw - 32px);
-        min-width: calc(100vw - 32px);
-        height: calc(100vh - 80px);
-        overflow-y: scroll;
-    }
-
-    img {
-        width: calc(100vw - 32px);
-        border-radius: 16px;
-    }
-}
-
-
-@media only screen and (min-width: 768px) and (max-width: 1023px) {
-    /* CSS rules for tablets */
-}
-
-@media only screen and (min-width: 1024px) {
-    /* CSS rules for PCs and larger screens */
 }
