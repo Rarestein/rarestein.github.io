@@ -25,6 +25,7 @@ body {
 
 .header {
     display: flex;
+
     align-items: center;
     background: var(--bg-extra);
     color: var(--text-main);
@@ -234,10 +235,13 @@ footer {
         font-size: 0.8rem;
     }
 
-    h1 {
-        font-size: 2rem;
+    .header {
+        width: 100%;
+        top: 0;
+        position: fixed;
     }
 
+    h1,
     .header h1 {
         font-size: 2rem;
     }
@@ -247,17 +251,16 @@ footer {
         padding-left: 2px;
     }
 
-    .projects-grid {
+    .projects-grid,
+    .story,
+    .contact {
         grid-template-columns: auto;
+        margin-bottom: 5em;
+        margin-top: 8em;
     }
 
     .project img {
         width: calc(100vw / 1.5);
-    }
-
-    .story,
-    .contact {
-        grid-template-columns: auto;
     }
 
     .story img,
